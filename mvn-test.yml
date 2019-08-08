@@ -38,11 +38,11 @@ pipelines:
                 type: email
                 recipients:
                   - manojtuguru@gmail.com
-        execution:
-          onStart:
-            - _set_jdk openjdk8
-            - javac -version
-            - mvn --version
+          execution:
+            onStart:
+              - _set_jdk openjdk8
+              - javac -version
+              - mvn --version
       - name: publish
         type: PublishBuildInfo
         configuration:
