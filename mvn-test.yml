@@ -32,6 +32,12 @@ pipelines:
             - name: project_example
           integrations:
             - name: art
+          integrations:
+            notifications:
+              - integrationName: smtp
+                type: email
+                recipients:
+                  - manojtuguru@gmail.com
         execution:
           onStart:
             - _set_jdk openjdk8
