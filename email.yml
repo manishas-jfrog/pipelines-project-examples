@@ -19,4 +19,5 @@ pipelines:
             - echo "starting"
             - send_notification smtp --recipients "manojtuguru@gmail.com"
           onExecute:
-            - echo "executing"
+            - echo "hello world"
+            - send_notification smtp --recipients "manojtuguru@gmail.com"
