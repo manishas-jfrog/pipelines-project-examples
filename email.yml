@@ -10,7 +10,7 @@ pipelines:
   - name: email_notifications
     steps:
       - name: email_onStart
-        type: bash
+        type: Bash
         integrations:
             - smtp
         execution:
