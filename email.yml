@@ -12,7 +12,7 @@ pipelines:
       - name: email_onStart
         type: Bash
         configuration: 
-          integration:
+          integrations:
             - name : smtp
         execution:
           onStart:
