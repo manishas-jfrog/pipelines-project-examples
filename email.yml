@@ -10,7 +10,7 @@ pipelines:
   - name: email_notifications
     steps:
       - name: email_onStart
-        type: bash
+        type: Bash
         requires:
           integrations:
             - smtp
@@ -22,7 +22,7 @@ pipelines:
             - echo "executing"
 
       - name: email_onExecute
-        type: bash
+        type: Bash
         requires:
           integrations:
             - smtp
@@ -56,7 +56,7 @@ pipelines:
             - echo "complete"
 
       - name: email_onFailure
-        type: bash
+        type: Bash
         triggeredBy:
           steps:
             - email_onExecute
@@ -85,7 +85,7 @@ pipelines:
             - echo "complete"
 
       - name: email_onComplete_success
-        type: bash
+        type: Bash
         triggeredBy:
           steps:
             - email_onSuccess
@@ -128,7 +128,7 @@ pipelines:
             - send_notification smtp --recipients "manojtuguru@gmail.com"
 
       - name: email_onComplete_badOnSuccess
-        type: bash
+        type: Bash
         triggeredBy:
           steps:
             - email_onSuccess
@@ -150,7 +150,7 @@ pipelines:
             - send_notification smtp --recipients "manojtuguru@gmail.com"
 
       - name: email_attachments
-        type: bash
+        type: Bash
         triggeredBy:
           steps:
             - email_onStart
@@ -163,7 +163,7 @@ pipelines:
             - send_notification smtp --recipients "manojtuguru@gmail.com" --attach-logs
 
       - name: email_quick
-        type: bash
+        type: Bash
         triggeredBy:
           steps:
             - email_onStart
