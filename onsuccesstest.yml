@@ -1,0 +1,21 @@
+resources:
+  - name: emailRepo
+    type: GitRepo
+    configuration:
+      path: Manojtuguru/pipelines-project-examples
+      gitProvider: github
+      sha: master
+
+pipelines:
+- name: errorPipeline
+  steps:
+  - name: errorStep
+    type: Bash
+    execution:
+      onExecute:
+      - echo "execute"
+      onSuccess:
+      - echo "Joe"
+      - "false"
+      - $?
+      - echo "Continuing"
