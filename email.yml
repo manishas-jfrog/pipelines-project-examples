@@ -7,15 +7,15 @@ resources:
       sha: master
 
 pipelines:
-  - name: pipe1
+  - name: email_notifications
     steps:
-      - name: test_step_1
-        type: Bash
-        configuration:
-          integrations:
-            - smtp       # replace with friendly name of your SMTP Credentials integration
+      - name: email_onStart
+        type: bash
+        integrations:
+            - smtp
         execution:
-          onSuccess:
-            - send_notification notifySMTP --recipients "manojtuguru@gmail.com" --subject "Build Succeeded" --body "built docker image 112.32.101.173:8081/docker-local/demo:$PIPELINE_NAME.$RUN_NUMBER"
-          onComplete:
-            - # can use send_notification command here
+          onStart:
+            - echo "starting"
+            - send_notification smtp --recipients "manojtuguru@gmail.com"
+          onExecute:
+            - echo "executing"
