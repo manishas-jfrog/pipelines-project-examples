@@ -11,6 +11,9 @@ pipelines:
     steps:
       - name: email_onStart
         type: Bash
+        configuration: 
+          integration: 
+            - smtp
         execution:
           onStart:
             - echo "starting"
