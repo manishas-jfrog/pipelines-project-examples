@@ -13,7 +13,7 @@ pipelines:
         type: Bash
         configuration: 
           integrations:
-            - name : smtp
+            - name : smtp   #replace this with your smtp integration name
         execution:
           onStart:
             - echo "starting"
