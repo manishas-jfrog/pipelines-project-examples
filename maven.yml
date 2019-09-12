@@ -10,6 +10,6 @@ pipelines:
     steps:
       - name : CheckArtRunning
         type : Bash
-        Execute:
+        execution:
           - echo "Check if the instance is running"
           - curl http://35.231.3.112:8081/artifacatory/api/system/ping
