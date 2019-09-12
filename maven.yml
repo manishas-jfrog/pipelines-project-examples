@@ -1,9 +1,9 @@
 resources:
   - name: SH script
   - type: GitRepo
-  configuration:
-    gitprovider: github
-    path: manojtuguru/pipelines-project-examples
+    configuration:
+      gitprovider: github
+      path: manojtuguru/pipelines-project-examples
 
 
 pipelines:
@@ -14,4 +14,3 @@ pipelines:
       onStart:
         - echo "Check if the instance is running"
         - curl http://35.231.3.112:8081/artifacatory/api/system/ping
-        
