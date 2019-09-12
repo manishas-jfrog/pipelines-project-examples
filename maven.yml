@@ -3,7 +3,7 @@ resources:
   - type: GitRepo
   configuration:
     gitprovider: github
-    path: manojtuguru/upgrade
+    path: manojtuguru/pipelines-project-examples
 
 
 pipelines:
