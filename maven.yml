@@ -9,7 +9,7 @@ resources:
 pipelines:
   - name : Artifactory upgrade
     steps:
-      - name : Check Art Running
+      - name : CheckArtRunning
         type : Bash
         onStart:
           - echo "Check if the instance is running"
