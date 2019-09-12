@@ -1,10 +1,9 @@
 resources:
-  - name: SHscript
-  - type: GitRepo
+  - name: project_example
+    type: GitRepo
     configuration:
-      gitProvider: github
-      path: manojtuguru/pipelines-project-examples
-
+      gitProvider:  github
+      path: manojtuguru/project-examples
 
 pipelines:
   - name : Artifactoryupgrade
