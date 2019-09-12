@@ -10,7 +10,7 @@ pipelines:
   - name : Artifactory upgrade
     steps:
       - name : Check Art Running
-      type : Bash
-      onStart:
-        - echo "Check if the instance is running"
-        - curl http://35.231.3.112:8081/artifacatory/api/system/ping
+        type : Bash
+        onStart:
+          - echo "Check if the instance is running"
+          - curl http://35.231.3.112:8081/artifacatory/api/system/ping
