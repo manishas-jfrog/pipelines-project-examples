@@ -2,9 +2,8 @@ resources:
   - name: SHscript
   - type: GitRepo
     configuration:
-      gitprovider: github
+      gitProvider: github
       path: manojtuguru/pipelines-project-examples
-      name: gitrepo
 
 
 pipelines:
