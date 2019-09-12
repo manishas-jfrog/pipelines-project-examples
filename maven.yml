@@ -4,6 +4,7 @@ resources:
     configuration:
       gitprovider: github
       path: manojtuguru/pipelines-project-examples
+      name: gitrepo
 
 
 pipelines:
