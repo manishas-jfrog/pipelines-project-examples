@@ -37,7 +37,7 @@ pipelines:
             - _set_jdk openjdk8
             - javac -version
             - mvn --version
-      - name: publish
+      - name: publishi
         type: PublishBuildInfo
         configuration:
           inputSteps:
