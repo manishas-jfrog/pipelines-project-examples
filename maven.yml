@@ -2,7 +2,7 @@ resources:
   - name: project_example
     type: GitRepo
     configuration:
-      gitProvider:  GitHub
+      gitProvider:  manojtest
       path: Skamatam/project-examples
 
 pipelines:
