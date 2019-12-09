@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider:  github
-      path: manojtuguru/project-examples
+      path: Skamatam/project-examples
 
 pipelines:
   - name : Artifactoryupgrade
