@@ -13,6 +13,6 @@ pipelines:
         execution:
          onExecute:
           - echo "Check if the instance is running"
-          - curl http://35.231.3.112:8081/artifactory/api/system/ping
+          - curl http://10.70.30.179:8082/artifactory/api/system/ping
          onSuccess:
           - done "success" 
