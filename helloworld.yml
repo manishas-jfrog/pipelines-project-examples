@@ -3,8 +3,8 @@ resources:
   - name: myApprepo1
     type: GitRepo
     configuration:
-      gitProvider: manoj_github   # replace with your integration
-      path: pipelines-project-examples/app    # replace with your repository name
+      gitProvider: manishas_github   # replace with your integration
+      path: manishas-jfrog/pipelines-project-examples    # replace with your repository name
       branches:
         include: master
 
@@ -15,7 +15,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-          #  - name: myApprepo1
+            - name: myApprepo1
         execution:
           onExecute:
             - printenv
